@@ -8,6 +8,8 @@ private:
 		int nomer;
 		string  tip;
 		string kyda;
+
+
 public:
 	void set_nomer(int);
 	void set_tip(string);
@@ -15,7 +17,20 @@ public:
 	string get_tip();
 	string get_kyda();
 	int get_nomer();
-	void addreis(AEROFLOT);
+	
+	AEROFLOT(){
+	}
+	AEROFLOT(const AEROFLOT& reis)
+	{
+		nomer = reis.nomer;
+		tip = reis.tip;
+		kyda = reis.kyda;
+		
+	}
+	~AEROFLOT()
+	{
+	
 
+	}
 };
 

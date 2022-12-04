@@ -3,6 +3,7 @@
 #include <iostream>
 #include <conio.h>
 #include "AEROFLOT.h"
+#include "Keep.h"
 
 using namespace std;
 void main()
@@ -13,6 +14,9 @@ void main()
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	setlocale(LC_CTYPE, "rus");
 	AEROFLOT reis;
+	Keep k;
+	string vvod;
+	int chislo;
 	while (i != 4)
 	{
 
@@ -39,11 +43,39 @@ void main()
 			case 0:
 
 
+				cout << "Номер рейса:" << endl;
+				cin>>chislo;
+				reis.set_nomer(chislo);
+				cout << "Тип самолета:" << endl;
+				getline(cin, vvod);
+				getline(cin, vvod);
+				reis.set_tip(vvod);
+				cout << "Куда летит:" << endl;
+				getline(cin, vvod);
+				reis.set_kyda(vvod);
+				k.addreis(reis);
+				cout << "Рейс добавлен" << endl;
+				system("pause");
 
+				break;
+				
 
+			case 1:
 
 				break;
 
+			case 2:
+				k.info();
+				system("pause");
+
+				break;
+			case 3:
+				cout << "Введите пункт назначенния: " << endl;
+				getline(cin, vvod);
+				if (k.pynkt(vvod) == FALSE)
+					cout << "Нет рейсов в этот пункт"<<endl;
+				system("pause");
+				break;
 
 
 
@@ -84,3 +116,9 @@ void menu(HANDLE con, int flag)
 
 	SetConsoleTextAttribute(con, w);
 }
+
+
+
+
+
+

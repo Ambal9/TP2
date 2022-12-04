@@ -29,9 +29,3 @@ int AEROFLOT::get_nomer()
 {
     return this->nomer;
 }
-
-void AEROFLOT::addreis(AEROFLOT reis)
-{
-
-
-}
