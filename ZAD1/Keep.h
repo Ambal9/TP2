@@ -16,6 +16,7 @@ public:
 	void info();
 	void sort();
 	bool pynkt(string);
+	
 
 
 }; 

@@ -8,6 +8,8 @@
 using namespace std;
 void main()
 {
+
+	
 	void menu(HANDLE con, int flag);
 	int i = 0;
 	char flag = '0';
@@ -16,8 +18,7 @@ void main()
 	AEROFLOT reis;
 	Keep k;
 	string vvod;
-	int chislo;
-	while (i != 4)
+	while (i != 3)
 	{
 
 		menu(hConsole, i);
@@ -26,7 +27,7 @@ void main()
 			flag = _getch();
 			if (flag == 's')
 			{
-				if (i < 3)
+				if (i < 2)
 					i++;
 				menu(hConsole, i);
 			}
@@ -44,10 +45,9 @@ void main()
 
 
 				cout << "Номер рейса:" << endl;
-				cin>>chislo;
-				reis.set_nomer(chislo);
-				cout << "Тип самолета:" << endl;
 				getline(cin, vvod);
+				reis.set_nomer(vvod);
+				cout << "Тип самолета:" << endl;
 				getline(cin, vvod);
 				reis.set_tip(vvod);
 				cout << "Куда летит:" << endl;
@@ -58,18 +58,14 @@ void main()
 				system("pause");
 
 				break;
-				
+			
 
 			case 1:
-
-				break;
-
-			case 2:
 				k.info();
 				system("pause");
 
 				break;
-			case 3:
+			case 2:
 				cout << "Введите пункт назначенния: " << endl;
 				getline(cin, vvod);
 				if (k.pynkt(vvod) == FALSE)
@@ -89,6 +85,8 @@ void main()
 
 	}
 
+
+	
 }
 void menu(HANDLE con, int flag)
 {
@@ -103,14 +101,10 @@ void menu(HANDLE con, int flag)
 	cout << "1.Добавление Рейса" << endl;
 	if (flag == 1) SetConsoleTextAttribute(con, b);
 	else SetConsoleTextAttribute(con, w);
-	cout << "2.Удаление Рейса" << endl;
+	cout << "2.Вывод всех рейсов" << endl;
 	if (flag == 2) SetConsoleTextAttribute(con, b);
 	else SetConsoleTextAttribute(con, w);
-	cout << "3.Вывод всех рейсов" << endl;
-	if (flag == 3) SetConsoleTextAttribute(con, b);
-
-	else SetConsoleTextAttribute(con, w);
-	cout << "4.Поиск рейсов по названию пункта назначения" << endl;
+	cout << "3.Поиск рейсов по названию пункта назначения" << endl;
 	
 
 

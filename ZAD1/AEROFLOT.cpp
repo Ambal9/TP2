@@ -1,6 +1,6 @@
 #include "AEROFLOT.h"
 
-void AEROFLOT::set_nomer(int nomer)
+void AEROFLOT::set_nomer(string nomer)
 {
     this->nomer = nomer;
 }
@@ -25,7 +25,7 @@ string AEROFLOT::get_kyda()
     return string(this->kyda);
 }
 
-int AEROFLOT::get_nomer()
+string AEROFLOT::get_nomer()
 {
     return this->nomer;
 }

@@ -5,20 +5,23 @@ using namespace std;
 class AEROFLOT
 {
 private:
-		int nomer;
+		string nomer;
 		string  tip;
 		string kyda;
 
 
 public:
-	void set_nomer(int);
+	void set_nomer(string);
 	void set_tip(string);
 	void set_kyda(string);
 	string get_tip();
 	string get_kyda();
-	int get_nomer();
+	string get_nomer();
 	
 	AEROFLOT(){
+		nomer = "0";
+		tip = "0";
+		kyda = "0";
 	}
 	AEROFLOT(const AEROFLOT& reis)
 	{

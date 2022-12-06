@@ -23,19 +23,21 @@ void Keep::addreis(AEROFLOT reis)
 }
 void Keep::info()
 {
+	cout << "Рейсы" << endl;
 	if (size_aer ==1)
 	{
 		for (size = 0; size <= size_aer - 1; size++)
 		{
 
-			cout << "Рейсы   " << size + 1 << ": Номер рейса: " << m[size].get_nomer() << ", Тип самолета: " << m[size].get_tip() << ", Куда летит: " << m[size].get_kyda() << endl;
+			cout << "Номер рейса: " << m[size].get_nomer() << "| Тип самолета: " << m[size].get_tip() << "| Куда летит: " << m[size].get_kyda() << endl;
+			
 		}
 	}
 	else {
 		for (size = 0; size <= size_aer - 2; size++)
 		{
 
-			cout << "Рейсы" << size + 1 << ": Номер рейса: " << m[size].get_nomer() << ", Тип самолета: " << m[size].get_tip() << ", Куда летит: " << m[size].get_kyda() << endl;
+			cout << "Номер рейса: " << m[size].get_nomer() << "| Тип самолета: " << m[size].get_tip() << "| Куда летит: " << m[size].get_kyda() << endl;
 		}
 	}
 }
@@ -71,7 +73,7 @@ bool Keep::pynkt(string vvod)
 	{
 		if (m[i].get_kyda() == vvod)
 		{
-			cout << " Номер рейса: " << m[i].get_nomer() << ", Тип самолета: " << m[i].get_tip() << ", Куда летит: " << m[i].get_kyda() << endl;
+			cout << " Номер рейса: " << m[i].get_nomer() << "| Тип самолета: " << m[i].get_tip() << "| Куда летит: " << m[i].get_kyda() << endl;
 			b = 1;
 		}
 	}
