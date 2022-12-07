@@ -8,7 +8,7 @@ class Keep
 {
 private:
 	int size_aer = 1;
-	int size;
+	int size = 0;
 	AEROFLOT* m = new AEROFLOT[size_aer];
 
 public:
@@ -16,7 +16,10 @@ public:
 	void info();
 	void sort();
 	bool pynkt(string);
-	
 
 
+	~Keep()
+	{
+		delete[] m;
+	}
 }; 

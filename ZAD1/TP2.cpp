@@ -27,7 +27,7 @@ void main()
 			flag = _getch();
 			if (flag == 's')
 			{
-				if (i < 2)
+				if (i < 3)
 					i++;
 				menu(hConsole, i);
 			}
@@ -105,6 +105,9 @@ void menu(HANDLE con, int flag)
 	if (flag == 2) SetConsoleTextAttribute(con, b);
 	else SetConsoleTextAttribute(con, w);
 	cout << "3.Поиск рейсов по названию пункта назначения" << endl;
+	if (flag == 3) SetConsoleTextAttribute(con, b);
+	else SetConsoleTextAttribute(con, w);
+	cout << "3.Выход" << endl;
 	
 
 
